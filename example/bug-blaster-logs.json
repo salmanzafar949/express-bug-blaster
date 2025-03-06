@@ -1,0 +1,92 @@
+[
+  {
+    "message": "posts is not defined",
+    "location": "/Users/salman/Desktop/workspace/express-js-bug-blaster/example/index.js:7 (in anonymous function) - Code: \"posts\" [GET /posts]",
+    "timestamp": "2025-03-06T23:34:44.585Z",
+    "path": "/posts"
+  },
+  {
+    "message": "posts is not defined",
+    "location": "/Users/salman/Desktop/workspace/express-js-bug-blaster/example/index.js:7 (in anonymous) - Code: \"posts\" [GET /posts]",
+    "timestamp": "2025-03-06T23:42:20.670Z",
+    "path": "/posts"
+  },
+  {
+    "message": "posts is not defined",
+    "location": "/Users/salman/Desktop/workspace/express-js-bug-blaster/example/index.js:7 (in anonymous) - Code: \"posts\" [GET /posts]",
+    "timestamp": "2025-03-06T23:45:34.048Z",
+    "path": "/posts"
+  },
+  {
+    "message": "posts is not defined",
+    "location": "/Users/salman/Desktop/workspace/express-js-bug-blaster/example/index.js:7 (in anonymous) - Code: \"posts\" [GET /posts]",
+    "timestamp": "2025-03-06T23:47:48.750Z",
+    "path": "/posts"
+  },
+  {
+    "message": "posts is not defined",
+    "location": "/Users/salman/Desktop/workspace/express-js-bug-blaster/example/index.js:7 (in anonymous) - Code: \"posts\" [GET /posts]",
+    "timestamp": "2025-03-06T23:48:35.331Z",
+    "path": "/posts"
+  },
+  {
+    "message": "posts is not defined",
+    "location": "/Users/salman/Desktop/workspace/express-js-bug-blaster/example/index.js:7 (in anonymous) - Code: \"posts\" [GET /posts]",
+    "timestamp": "2025-03-06T23:50:07.593Z",
+    "path": "/posts"
+  },
+  {
+    "message": "posts is not defined",
+    "location": "/Users/salman/Desktop/workspace/express-js-bug-blaster/example/index.js:7 (in anonymous) - Code: \"posts\" [GET /posts]",
+    "timestamp": "2025-03-06T23:50:40.177Z",
+    "path": "/posts"
+  },
+  {
+    "message": "posts is not defined",
+    "location": "/Users/salman/Desktop/workspace/express-js-bug-blaster/example/index.js:7 (in anonymous) - Code: \"posts\" [GET /posts]",
+    "timestamp": "2025-03-06T23:52:29.835Z",
+    "path": "/posts"
+  },
+  {
+    "message": "posts is not defined",
+    "location": "/Users/salman/Desktop/workspace/express-js-bug-blaster/example/index.js:7 (in anonymous) - Code: \"posts\" [GET /posts]",
+    "tip": "Check the stack trace for more context. Add logging or debugging to narrow down the issue. The code \"posts\" may provide a clue.",
+    "path": "/posts",
+    "trace": "undefined Full stack: /Users/salman/Desktop/workspace/express-js-bug-blaster/example/index.js:7 -> /Users/salman/Desktop/workspace/express-js-bug-blaster/node_modules/express/lib/router/layer.js:95 -> /Users/salman/Desktop/workspace/express-js-bug-blaster/node_modules/express/lib/router/route.js:149 -> /Users/salman/Desktop/workspace/express-js-bug-blaster/node_modules/express/lib/router/route.js:119 -> /Users/salman/Desktop/workspace/express-js-bug-blaster/node_modules/express/lib/router/layer.js:95 -> /Users/salman/Desktop/workspace/express-js-bug-blaster/node_modules/express/lib/router/index.js:284 -> /Users/salman/Desktop/workspace/express-js-bug-blaster/node_modules/express/lib/router/index.js:346 -> /Users/salman/Desktop/workspace/express-js-bug-blaster/node_modules/express/lib/router/index.js:280 -> /Users/salman/Desktop/workspace/express-js-bug-blaster/node_modules/body-parser/lib/types/json.js:113 -> /Users/salman/Desktop/workspace/express-js-bug-blaster/node_modules/express/lib/router/layer.js:95",
+    "timestamp": "2025-03-06T23:53:59.853Z"
+  },
+  {
+    "message": "posts is not defined",
+    "location": "/Users/salman/Desktop/workspace/express-js-bug-blaster/example/index.js:7 (in anonymous) - Code: \"posts\" [GET /posts]",
+    "tip": "Check the stack trace for more context. Add logging or debugging to narrow down the issue. The code \"posts\" may provide a clue.",
+    "path": "/posts",
+    "trace": "Trace Full stack: /Users/salman/Desktop/workspace/express-js-bug-blaster/example/index.js:7 -> /Users/salman/Desktop/workspace/express-js-bug-blaster/node_modules/express/lib/router/layer.js:95 -> /Users/salman/Desktop/workspace/express-js-bug-blaster/node_modules/express/lib/router/route.js:149 -> /Users/salman/Desktop/workspace/express-js-bug-blaster/node_modules/express/lib/router/route.js:119 -> /Users/salman/Desktop/workspace/express-js-bug-blaster/node_modules/express/lib/router/layer.js:95 -> /Users/salman/Desktop/workspace/express-js-bug-blaster/node_modules/express/lib/router/index.js:284 -> /Users/salman/Desktop/workspace/express-js-bug-blaster/node_modules/express/lib/router/index.js:346 -> /Users/salman/Desktop/workspace/express-js-bug-blaster/node_modules/express/lib/router/index.js:280 -> /Users/salman/Desktop/workspace/express-js-bug-blaster/node_modules/body-parser/lib/types/json.js:113 -> /Users/salman/Desktop/workspace/express-js-bug-blaster/node_modules/express/lib/router/layer.js:95",
+    "timestamp": "2025-03-06T23:54:49.555Z"
+  },
+  {
+    "message": "posts is not defined",
+    "location": "/Users/salman/Desktop/workspace/express-js-bug-blaster/example/index.js:7 (in anonymous) - Code: \"posts\" [GET /posts]",
+    "tip": "Check the stack trace for more context. Add logging or debugging to narrow down the issue. The code \"posts\" may provide a clue.",
+    "path": "/posts",
+    "trace": "Full stack: /Users/salman/Desktop/workspace/express-js-bug-blaster/example/index.js:7 -> /Users/salman/Desktop/workspace/express-js-bug-blaster/node_modules/express/lib/router/layer.js:95 -> /Users/salman/Desktop/workspace/express-js-bug-blaster/node_modules/express/lib/router/route.js:149 -> /Users/salman/Desktop/workspace/express-js-bug-blaster/node_modules/express/lib/router/route.js:119 -> /Users/salman/Desktop/workspace/express-js-bug-blaster/node_modules/express/lib/router/layer.js:95 -> /Users/salman/Desktop/workspace/express-js-bug-blaster/node_modules/express/lib/router/index.js:284 -> /Users/salman/Desktop/workspace/express-js-bug-blaster/node_modules/express/lib/router/index.js:346 -> /Users/salman/Desktop/workspace/express-js-bug-blaster/node_modules/express/lib/router/index.js:280 -> /Users/salman/Desktop/workspace/express-js-bug-blaster/node_modules/body-parser/lib/types/json.js:113 -> /Users/salman/Desktop/workspace/express-js-bug-blaster/node_modules/express/lib/router/layer.js:95",
+    "timestamp": "2025-03-06T23:55:17.075Z"
+  },
+  {
+    "message": "posts is not defined",
+    "location": "/Users/salman/Desktop/workspace/express-js-bug-blaster/example/index.js:7 (in anonymous) - Code: \"posts\" [GET /posts]",
+    "tip": "Check the stack trace for more context. Add logging or debugging to narrow down the issue. The code \"posts\" may provide a clue.",
+    "path": "/posts",
+    "trace": "Full stack: /Users/salman/Desktop/workspace/express-js-bug-blaster/example/index.js:7 -> /Users/salman/Desktop/workspace/express-js-bug-blaster/node_modules/express/lib/router/layer.js:95 -> /Users/salman/Desktop/workspace/express-js-bug-blaster/node_modules/express/lib/router/route.js:149 -> /Users/salman/Desktop/workspace/express-js-bug-blaster/node_modules/express/lib/router/route.js:119 -> /Users/salman/Desktop/workspace/express-js-bug-blaster/node_modules/express/lib/router/layer.js:95 -> /Users/salman/Desktop/workspace/express-js-bug-blaster/node_modules/express/lib/router/index.js:284 -> /Users/salman/Desktop/workspace/express-js-bug-blaster/node_modules/express/lib/router/index.js:346 -> /Users/salman/Desktop/workspace/express-js-bug-blaster/node_modules/express/lib/router/index.js:280 -> /Users/salman/Desktop/workspace/express-js-bug-blaster/node_modules/body-parser/lib/types/json.js:113 -> /Users/salman/Desktop/workspace/express-js-bug-blaster/node_modules/express/lib/router/layer.js:95",
+    "reason": "Error: \"posts is not defined\" occurred at /Users/salman/Desktop/workspace/express-js-bug-blaster/example/index.js:7 (in anonymous) - Code: \"posts\".",
+    "timestamp": "2025-03-06T23:56:29.542Z"
+  },
+  {
+    "message": "posts is not defined",
+    "location": "/Users/salman/Desktop/workspace/express-js-bug-blaster/example/index.js:7 (in anonymous) - Code: \"posts\" [GET /posts]",
+    "tip": "Check the stack trace for more context. Add logging or debugging to narrow down the issue. The code \"posts\" may provide a clue.",
+    "path": "/posts",
+    "trace": "Full stack: /Users/salman/Desktop/workspace/express-js-bug-blaster/example/index.js:7 -> /Users/salman/Desktop/workspace/express-js-bug-blaster/node_modules/express/lib/router/layer.js:95 -> /Users/salman/Desktop/workspace/express-js-bug-blaster/node_modules/express/lib/router/route.js:149 -> /Users/salman/Desktop/workspace/express-js-bug-blaster/node_modules/express/lib/router/route.js:119 -> /Users/salman/Desktop/workspace/express-js-bug-blaster/node_modules/express/lib/router/layer.js:95 -> /Users/salman/Desktop/workspace/express-js-bug-blaster/node_modules/express/lib/router/index.js:284 -> /Users/salman/Desktop/workspace/express-js-bug-blaster/node_modules/express/lib/router/index.js:346 -> /Users/salman/Desktop/workspace/express-js-bug-blaster/node_modules/express/lib/router/index.js:280 -> /Users/salman/Desktop/workspace/express-js-bug-blaster/node_modules/body-parser/lib/types/json.js:113 -> /Users/salman/Desktop/workspace/express-js-bug-blaster/node_modules/express/lib/router/layer.js:95",
+    "reason": "Error: \"posts is not defined\" occurred at /Users/salman/Desktop/workspace/express-js-bug-blaster/example/index.js:7 (in anonymous) - Code: \"posts\".",
+    "timestamp": "2025-03-06T23:57:58.990Z"
+  }
+]
