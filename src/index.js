@@ -2,13 +2,15 @@ const stackTrace = require('stack-trace');
 const chalk = require('chalk');
 const { analyzeError } = require('./lib/errorAnalyzer');
 const { logError } = require('./lib/logger');
+const notifyChannels = require("./lib/notifyChannels");
 
 function bugBlaster(options = {}) {
     let {
         logToFile,
-        logFilePath = process.cwd() + '/bug-blaster-logs.json', // Default to user’s project root
+        logFilePath,
         defaultResponse,
         onError,
+        channels
     } = options;
 
     logToFile = logToFile ?? true
@@ -34,17 +36,20 @@ ${chalk.blue('Location:')} ${explanation.location}
 ${chalk.magenta('Trace:')} ${explanation.trace}
         `;
                 console.log(bugReport);
+                const logEntry = {
+                    message: err.message,
+                    location: explanation.location,
+                    tip: explanation.tip,
+                    path: req.path,
+                    trace: explanation.trace,
+                    reason: explanation.reason,
+                    timestamp: new Date().toISOString(),
+                }
 
-                if (logToFile) logError({
-                        message: err.message,
-                        location: explanation.location,
-                        tip: explanation.tip,
-                        path: req.path,
-                        trace: explanation.trace,
-                        reason: explanation.reason,
-                        timestamp: new Date().toISOString(),
-                    },logFilePath);
-
+                if (typeof channels === 'object' && Object.keys(channels).length)
+                    notifyChannels(err, logEntry, channels);
+                if (logToFile)
+                    logError(logEntry, logFilePath);
 
                 if (!res.headersSent) {
                     if (typeof onError === 'function') {
