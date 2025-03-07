@@ -1,5 +1,5 @@
 {
-  "name": "express-bug-blaster",
+  "name": "express-bugblaster",
   "version": "0.0.1",
   "description": "A Express Js error debugging assistant with code inspection.",
   "main": "src",
