@@ -8,15 +8,21 @@
   },
   "scripts": {
     "start": "node src",
-    "test": "echo 'Running tests (placeholder)' && exit 0"
+    "test": "jest --coverage"
   },
   "dependencies": {
     "axios": "^1.6.8",
     "chalk": "^4.1.2",
     "express": "^4.18.2",
-    "stack-trace": "^0.0.10"
+    "stack-trace": "^0.0.10",
+    "supertest": "^7.0.0"
   },
-  "keywords": ["node", "express", "debugging", "errors"],
+  "keywords": [
+    "node",
+    "express",
+    "debugging",
+    "errors"
+  ],
   "author": "Salman Zafar <salmanzafar949@gmail.com>",
   "license": "MIT",
   "repository": {
@@ -28,5 +34,8 @@
     "url": "https://github.com/salmanzafar949/express-bug-blaster/issues",
     "email": "salmanzafar949@gmail.com"
   },
-  "funding": "https://github.com/salmanzafar949/express-bug-blaster?sponsor=1"
+  "funding": "https://github.com/salmanzafar949/express-bug-blaster?sponsor=1",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
 }
