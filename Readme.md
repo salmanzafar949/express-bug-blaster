@@ -1,5 +1,5 @@
 # BugBlaster
-A TypeScript-based Node.js/Express error debugging assistant with AI-powered analysis and crash prevention.
+A Node.js/Express error debugging assistant with AI-powered analysis and crash prevention.
 
 ## Installation
 ```bash
