@@ -6,7 +6,7 @@ const { logError } = require('./lib/logger');
 function bugBlaster(options = {}) {
     let {
         logToFile,
-        logFilePath = process.cwd() + '/bug-blaster-logs.json', // Default to user’s project root
+        logFilePath,
         defaultResponse,
         onError,
     } = options;
