@@ -2,9 +2,13 @@
   "name": "express-bug-blaster",
   "version": "0.0.1",
   "description": "A Express Js error debugging assistant with code inspection.",
-  "main": "dist/src/index.js",
+  "main": "src",
+  "engines": {
+    "node": ">=10"
+  },
   "scripts": {
-    "build": "npm run build"
+    "start": "node src",
+    "test": "echo 'Running tests (placeholder)' && exit 0"
   },
   "dependencies": {
     "axios": "^1.6.8",
@@ -13,10 +17,7 @@
     "stack-trace": "^0.0.10"
   },
   "keywords": ["node", "express", "debugging", "errors"],
-  "author": {
-    "name": "Salman Zafar",
-    "email": "salmanzafar949@gmail.com"
-  },
+  "author": "Salman Zafar <salmanzafar949@gmail.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -26,5 +27,6 @@
   "bugs": {
     "url": "https://github.com/salmanzafar949/express-bug-blaster/issues",
     "email": "salmanzafar949@gmail.com"
-  }
+  },
+  "funding": "https://github.com/salmanzafar949/express-bug-blaster?sponsor=1"
 }
