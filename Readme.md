@@ -42,17 +42,18 @@ const bugblaster = require('express-bugblaster');
 
 const app = express();
 
-// Add BugBlaster middleware
-app.use(bugblaster({
-  logToFile: true,
-  logFilePath: './errors.json',
-  defaultResponse: 'Oops, something went wrong!',
-}));
 
 // Example route that throws an error
 app.get('/crash', (req, res) => {
   throw new Error('Test error!');
 });
+
+// Add BugBlaster middleware after routes
+app.use(bugblaster({
+    logToFile: true,
+    logFilePath: './errors.json',
+    defaultResponse: 'Oops, something went wrong!',
+}));
 
 app.listen(3000, () => console.log('Server running on http://localhost:3000'));
 ```
@@ -60,12 +61,12 @@ app.listen(3000, () => console.log('Server running on http://localhost:3000'));
 ## Configuration Options
 ### Customize BugBlaster with these options:
 
-| Option          | Type       | Default                        | Description                                                                 |
-|-----------------|------------|--------------------------------|-----------------------------------------------------------------------------|
-| `logToFile`     | `boolean`  | `true`                         | Enable/disable logging to a file.                                           |
-| `logFilePath`   | `string`   | `./bugblaster-logs.json`       | Path to the log file (relative to process cwd).                             |
-| `defaultResponse` | `string` | `'Something went wrong...'`  | Default message returned in error responses.                                |
-| `onError`       | `function` | `undefined`                    | Custom error handler: `(err, req, res) => { ... }`.                         |
+| Option          | Type       | Default                        | Description                                                               |
+|-----------------|------------|--------------------------------|---------------------------------------------------------------------------|
+| `logToFile`     | `boolean`  | `true`                         | Enable/disable logging to a file.                                         |
+| `logFilePath`   | `string`   | `./bugblaster-logs.json`       | Path to the log file (relative to process cwd).                           |
+| `defaultResponse` | `string` | `'Something went wrong...'`  | Default message returned in error responses.                              |
+| `onError`       | `function` | `undefined`                    | Custom error handler: `(err, req, res) => {}`.                         |
 
 
 ## Development
