@@ -92,7 +92,7 @@ We welcome contributions to Express BugBlaster! Here's how you can contribute:
 2.  **Clone the Repository:**
     * Clone the forked repository to your local machine:
         ```bash
-        git clone [https://github.com/your-username/express-bugblaster.git](https://www.google.com/search?q=https://github.com/your-username/express-bugblaster.git)
+        git clone [https://github.com/salmanzafar949/express-bug-blaster.git](https://www.google.com/search?q=https://github.com/salmanzafar949/express-bug-blaster.git)
         ```
 
 3.  **Create a Branch:**
