@@ -4,6 +4,16 @@ const { analyzeError } = require('./lib/errorAnalyzer');
 const { logError } = require('./lib/logger');
 const notifyChannels = require("./lib/notifyChannels");
 
+/**
+ * Creates an Express error-handling middleware with enhanced debugging features
+ * @param {Object} [options] - Configuration options for BugBlaster
+ * @param {boolean} [options.logToFile=true] - Whether to log errors to a file
+ * @param {string} [options.logFilePath='./bugblaster-logs.json'] - Path to the log file
+ * @param {string} [options.defaultResponse='Something went wrong...'] - Default response sent to clients
+ * @param {(err: Error, req: import('express').Request, res: import('express').Response) => void} [options.onError] - Custom error handler
+ * @param {channels} [options.channels={}] - Notification channels (e.g., Slack, Teams, Discord)
+ * @returns {(err: Error, req: import('express').Request, res: import('express').Response, next: import('express').NextFunction) => void} Express error middleware
+ */
 function bugBlaster(options = {}) {
     let {
         logToFile,
