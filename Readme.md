@@ -10,7 +10,6 @@
 
 -   **Dynamic Error Analysis:** Automatically extracts error details from stack traces and source code.
 -   **Comprehensive Logging:** Saves errors to a customizable JSON log file for later review.
--   **AI Integration:** Optional AI-powered error explanations via Hugging Face (requires an API token).
 -   **Custom Responses:** Define custom error responses with an `onError` callback.
 -   **Environment Awareness:** Detailed error messages in development, concise responses in production.
 -   **Crash Protection:** Keeps your Express app running even after uncaught exceptions.

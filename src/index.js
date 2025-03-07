@@ -13,6 +13,7 @@ function bugBlaster(options = {}) {
 
     logToFile = logToFile ?? true
     defaultResponse = defaultResponse ?? 'Something went wrong. We’re looking into it!'
+    logFilePath = logFilePath ?? process.cwd() + '/bug-blaster-logs.json' // Default to user’s project root
 
     // Error-handling middleware
     return function (err, req, res, next) {
