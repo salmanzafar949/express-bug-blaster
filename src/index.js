@@ -46,7 +46,7 @@ ${chalk.magenta('Trace:')} ${explanation.trace}
 
 
                 if (!res.headersSent) {
-                    if (onError) {
+                    if (typeof onError === 'function') {
                         onError(err, req, res);
                     } else {
                         res.status(500).json({

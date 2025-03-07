@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">32.25% </span>
+                <span class="strong">67.74% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>10/31</span>
+                <span class='fraction'>21/31</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">33.33% </span>
+                <span class="strong">55.55% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>6/18</span>
+                <span class='fraction'>10/18</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">20% </span>
+                <span class="strong">60% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>1/5</span>
+                <span class='fraction'>3/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">34.48% </span>
+                <span class="strong">68.96% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>10/29</span>
+                <span class='fraction'>20/29</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -152,34 +152,32 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -188,11 +186,13 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -224,28 +224,28 @@ const chalk = require('chalk');
 const { analyzeError } = require('./lib/errorAnalyzer');
 const { logError } = require('./lib/logger');
 &nbsp;
-function bugBlaster(options = {}) {
+function bugBlaster(options = <span class="branch-0 cbranch-no" title="branch not covered" >{})</span> {
     let {
         logToFile,
-        logFilePath = process.cwd() + '/bug-blaster-logs.json', // Default to user’s project root
+        logFilePath = <span class="branch-0 cbranch-no" title="branch not covered" >process.cwd() + '/bug-blaster-logs.json',</span> // Default to user’s project root
         defaultResponse,
         onError,
     } = options;
 &nbsp;
-    logToFile = logToFile ?? true
-    defaultResponse = defaultResponse ?? 'Something went wrong. We’re looking into it!'
+    logToFile = logToFile ?? <span class="branch-1 cbranch-no" title="branch not covered" >true</span>
+    defaultResponse = defaultResponse ?? <span class="branch-1 cbranch-no" title="branch not covered" >'Something went wrong. We’re looking into it!'</span>
 &nbsp;
     // Error-handling middleware
-    return <span class="fstat-no" title="function not covered" >fu</span>nction (err, req, res, next) {
-<span class="cstat-no" title="statement not covered" >        if (!err) <span class="cstat-no" title="statement not covered" >return next(); </span></span>// Proceed if no error
+    return function (err, req, res, next) {
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (!err) <span class="cstat-no" title="statement not covered" >return next(); </span>// Proceed if no error
 &nbsp;
         // Log that BugBlaster received the error (for debugging)
-<span class="cstat-no" title="statement not covered" >        console.log(chalk.blue('[BugBlaster] Error received:', err.message));</span>
+        console.log(chalk.blue('[BugBlaster] Error received:', err.message));
 &nbsp;
         // Process the error asynchronously
-<span class="cstat-no" title="statement not covered" >        analyzeError(err, stackTrace.parse(err), req)</span>
-            .then(<span class="fstat-no" title="function not covered" >(e</span>xplanation) =&gt; {
-                const bugReport = <span class="cstat-no" title="statement not covered" >`</span>
+        analyzeError(err, stackTrace.parse(err), req)
+            .then((explanation) =&gt; {
+                const bugReport = `
 ${chalk.red('🐞 [BugBlaster] Error Detected:')} ${err.message}
 ${chalk.yellow('Where:')} ${explanation.location}
 ${chalk.cyan('Why:')} ${explanation.reason}
@@ -253,9 +253,9 @@ ${chalk.green('Tip:')} ${explanation.tip}
 ${chalk.blue('Location:')} ${explanation.location}
 ${chalk.magenta('Trace:')} ${explanation.trace}
         `;
-<span class="cstat-no" title="statement not covered" >                console.log(bugReport);</span>
+                console.log(bugReport);
 &nbsp;
-<span class="cstat-no" title="statement not covered" >                if (logToFile) <span class="cstat-no" title="statement not covered" >logError({</span></span>
+                if (logToFile) logError({
                         message: err.message,
                         location: explanation.location,
                         tip: explanation.tip,
@@ -266,11 +266,11 @@ ${chalk.magenta('Trace:')} ${explanation.trace}
                     },logFilePath);
 &nbsp;
 &nbsp;
-<span class="cstat-no" title="statement not covered" >                if (!res.headersSent) {</span>
-<span class="cstat-no" title="statement not covered" >                    if (onError) {</span>
-<span class="cstat-no" title="statement not covered" >                        onError(err, req, res);</span>
+                <span class="missing-if-branch" title="else path not taken" >E</span>if (!res.headersSent) {
+                    if (typeof onError === 'function') {
+                        onError(err, req, res);
                     } else {
-<span class="cstat-no" title="statement not covered" >                        res.status(500).json({</span>
+                        res.status(500).json({
                             error: defaultResponse,
                             details: process.env.NODE_ENV === 'development' ? err.message : undefined,
                         });
@@ -304,7 +304,7 @@ module.exports = bugBlaster;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-03-07T00:36:51.207Z
+                at 2025-03-07T01:41:07.342Z
             </div>
         <script src="../prettify.js"></script>
         <script>

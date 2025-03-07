@@ -37,5 +37,15 @@
   "funding": "https://github.com/salmanzafar949/express-bug-blaster?sponsor=1",
   "devDependencies": {
     "jest": "^29.7.0"
+  },
+  "jest": {
+    "coverageThreshold": {
+      "global": {
+        "branches": 50,
+        "functions": 60,
+        "lines": 60,
+        "statements": 60
+      }
+    }
   }
 }
