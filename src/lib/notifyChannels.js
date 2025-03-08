@@ -27,7 +27,8 @@ function notifyChannels(err, logEntry, channels) {
             content: `🐞 **Error Detected**: ${err.message}\n**Where**: ${logEntry.location}\n**When**: ${logEntry.timestamp}\n**Path**: ${logEntry.path}`,
         },
     };
-    for (const [platform, url] of Object.entries(channels)) {
+    for (const channel of channels) {
+        const {platform, url} = channel;
         if (message[platform] && url) {
             axios.post(url, message[platform]).catch((notifyErr) => {
                 console.error(chalk.yellow(`[BugBlaster] Failed to notify ${platform}:`), notifyErr.message);

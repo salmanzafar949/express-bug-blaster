@@ -11,7 +11,7 @@ const notifyChannels = require("./lib/notifyChannels");
  * @param {string} [options.logFilePath='./bugblaster-logs.json'] - Path to the log file
  * @param {string} [options.defaultResponse='Something went wrong...'] - Default response sent to clients
  * @param {(err: Error, req: import('express').Request, res: import('express').Response) => void} [options.onError] - Custom error handler
- * @param {channels} [options.channels={}] - Notification channels (e.g., Slack, Teams, Discord)
+ * @param {channels[]} [options.channels] - Array of notification channels (default: [])
  * @returns {(err: Error, req: import('express').Request, res: import('express').Response, next: import('express').NextFunction) => void} Express error middleware
  */
 function bugBlaster(options = {}) {
@@ -26,6 +26,7 @@ function bugBlaster(options = {}) {
     logToFile = logToFile ?? true
     defaultResponse = defaultResponse ?? 'Something went wrong. We’re looking into it!'
     logFilePath = logFilePath ?? process.cwd() + '/bug-blaster-logs.json' // Default to user’s project root
+    channels = Array.isArray(channels) ? channels : []
 
     // Error-handling middleware
     return function (err, req, res, next) {
@@ -56,7 +57,7 @@ ${chalk.magenta('Trace:')} ${explanation.trace}
                     timestamp: new Date().toISOString(),
                 }
 
-                if (typeof channels === 'object' && Object.keys(channels).length)
+                if (channels.length)
                     notifyChannels(err, logEntry, channels);
                 if (logToFile)
                     logError(logEntry, logFilePath);
