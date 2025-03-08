@@ -11,7 +11,7 @@ const notifyChannels = require("./lib/notifyChannels");
  * @param {string} [options.logFilePath='./bugblaster-logs.json'] - Path to the log file
  * @param {string} [options.defaultResponse='Something went wrong...'] - Default response sent to clients
  * @param {(err: Error, req: import('express').Request, res: import('express').Response) => void} [options.onError] - Custom error handler
- * @param {channels[]} [options.channels] - Array of notification channels (default: [])
+ * @param {channels[]} [options.channels=[]] - Array of notification channels (default: [])
  * @returns {(err: Error, req: import('express').Request, res: import('express').Response, next: import('express').NextFunction) => void} Express error middleware
  */
 function bugBlaster(options = {}) {
