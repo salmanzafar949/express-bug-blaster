@@ -4,7 +4,7 @@
 [![Express](https://img.shields.io/badge/Express-v4+-blue)](https://expressjs.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-**Express BugBlaster** is a lightweight and powerful middleware for Node.js/Express applications designed to streamline error handling and debugging. It captures and analyzes errors, providing detailed stack traces and logging capabilities, and includes optional AI-powered analysis through Hugging Face.
+**Express BugBlaster** is a lightweight and powerful middleware for Node.js/Express applications designed to streamline error handling and debugging. It captures and analyzes errors, providing detailed stack traces and logging capabilities and prevents app from crashing.
 
 ## Features
 
@@ -53,6 +53,10 @@ app.use(bugblaster({
     logToFile: true,
     logFilePath: './errors.json',
     defaultResponse: 'Oops, something went wrong!',
+    channels: [{
+        platform: 'teams',
+        url: 'https://ms-team.com/teams',
+    }]
 }));
 
 app.listen(3000, () => console.log('Server running on http://localhost:3000'));
@@ -61,12 +65,13 @@ app.listen(3000, () => console.log('Server running on http://localhost:3000'));
 ## Configuration Options
 ### Customize BugBlaster with these options:
 
-| Option          | Type       | Default                        | Description                                                               |
-|-----------------|------------|--------------------------------|---------------------------------------------------------------------------|
-| `logToFile`     | `boolean`  | `true`                         | Enable/disable logging to a file.                                         |
-| `logFilePath`   | `string`   | `./bugblaster-logs.json`       | Path to the log file (relative to process cwd).                           |
-| `defaultResponse` | `string` | `'Something went wrong...'`  | Default message returned in error responses.                              |
-| `onError`       | `function` | `undefined`                    | Custom error handler: `(err, req, res) => {}`.                         |
+| Option            | Type       | Default                        | Description                                                                                                                                                                                               |
+|-------------------|------------|--------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `logToFile`       | `boolean`  | `true`                         | Enable/disable logging to a file.                                                                                                                                                                         |
+| `logFilePath`     | `string`   | `./bugblaster-logs.json`       | Path to the log file (relative to process cwd).                                                                                                                                                           |
+| `defaultResponse` | `string`   | `'Something went wrong...'`  | Default message returned in error responses.                                                                                                                                                              |
+| `onError`         | `function` | `undefined`                    | Custom error handler: `(err, req, res) => {}`.                                                                                                                                                            |
+| `channels`        | `array`    | `undefined`                    | supported channels: slack,teams and discord ` channels: [{platform: "teams", url: "teams webhook url"}, {platform: "slack", url: "slack webhook url"}, {platform: "discord", url: "slack webhook url"}]`. |
 
 
 ## Development

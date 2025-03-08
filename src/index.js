@@ -2,18 +2,31 @@ const stackTrace = require('stack-trace');
 const chalk = require('chalk');
 const { analyzeError } = require('./lib/errorAnalyzer');
 const { logError } = require('./lib/logger');
+const notifyChannels = require("./lib/notifyChannels");
 
+/**
+ * Creates an Express error-handling middleware with enhanced debugging features
+ * @param {Object} [options] - Configuration options for BugBlaster
+ * @param {boolean} [options.logToFile=true] - Whether to log errors to a file
+ * @param {string} [options.logFilePath='./bugblaster-logs.json'] - Path to the log file
+ * @param {string} [options.defaultResponse='Something went wrong...'] - Default response sent to clients
+ * @param {(err: Error, req: import('express').Request, res: import('express').Response) => void} [options.onError] - Custom error handler
+ * @param {channels[]} [options.channels=[]] - Array of notification channels (default: [])
+ * @returns {(err: Error, req: import('express').Request, res: import('express').Response, next: import('express').NextFunction) => void} Express error middleware
+ */
 function bugBlaster(options = {}) {
     let {
         logToFile,
         logFilePath,
         defaultResponse,
         onError,
+        channels
     } = options;
 
     logToFile = logToFile ?? true
     defaultResponse = defaultResponse ?? 'Something went wrong. We’re looking into it!'
     logFilePath = logFilePath ?? process.cwd() + '/bug-blaster-logs.json' // Default to user’s project root
+    channels = Array.isArray(channels) ? channels : []
 
     // Error-handling middleware
     return function (err, req, res, next) {
@@ -34,17 +47,20 @@ ${chalk.blue('Location:')} ${explanation.location}
 ${chalk.magenta('Trace:')} ${explanation.trace}
         `;
                 console.log(bugReport);
+                const logEntry = {
+                    message: err.message,
+                    location: explanation.location,
+                    tip: explanation.tip,
+                    path: req.path,
+                    trace: explanation.trace,
+                    reason: explanation.reason,
+                    timestamp: new Date().toISOString(),
+                }
 
-                if (logToFile) logError({
-                        message: err.message,
-                        location: explanation.location,
-                        tip: explanation.tip,
-                        path: req.path,
-                        trace: explanation.trace,
-                        reason: explanation.reason,
-                        timestamp: new Date().toISOString(),
-                    },logFilePath);
-
+                if (channels.length)
+                    notifyChannels(err, logEntry, channels);
+                if (logToFile)
+                    logError(logEntry, logFilePath);
 
                 if (!res.headersSent) {
                     if (typeof onError === 'function') {
