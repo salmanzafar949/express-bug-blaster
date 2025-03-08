@@ -1,7 +1,7 @@
 {
   "name": "express-bugblaster",
-  "version": "1.0.2",
-  "description": "A Express Js error debugging assistant with code inspection.",
+  "version": "1.1.0",
+  "description": "A Express Js error debugging assistant with code inspection and prevents app from crashing.",
   "main": "src",
   "engines": {
     "node": ">=10"
